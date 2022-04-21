@@ -1,0 +1,41 @@
+Algorythme : Nombre myst
+Variables: entier : NbMyst, rep, cpt
+	CC: Joueur1, Joueur2
+Début
+	afficher "Bienvenue dans le jeu du nombre mystère"
+	afficher "Joueur1 veuillez rentrer votre pseudo "
+
+	Saisir Joueur1
+	Afficher "Joueur2 veuillez rentrer votre pseudo”
+
+	Saisir Joueur 2 
+	Afficher Joueur1," Veuillez saisir votre nombre mystère compris entre 1 et 100 "
+	Saisir Nbmyst 
+
+	Tant que(Nbmyst < 1) ou (Nbmyst > 100)
+	 Afficher "Votre nombre n'est pas correct, il doit être compris entre 1 et 100."
+	 saisir Nbmyst
+	FinTantque
+
+Cpt ? 0
+Rep ? 0
+
+Afficher joueur2, «  c’est maintenant à vous de trouver le nombre mystère choisi par », Joueur 1, « ce nombre est compris entre 1 et 100 mais attention vous ne disposez que de 10 essais, à vous de jouer.”
+	Tant que (Cpt<=10) et ( Nbmyst <> rep) 
+	Afficher «  veuillez saisir un nombre »
+	Saisir rep 
+		Si Nb = rep  Alors 
+		Afficher «  Waouh Félicitations " ,Joueur2, "Vous avez découvert le nombre mystere en " ,Cpt," essai(s)"
+                    Sinon Si Nbmyst < rep alors 
+                     Afficher «  Malheureusement ce nombre est trop haut, retentez votre chance, vous en êtes à ",Cpt, " essai(s)
+                                                             Sinon 
+                                                             Afficher «  Malheureusement ce nombre est trop bas, retentez votre chance, vous en êtes à " +Cpt+ "essai(s)”
+                                                             	 Sinon si  Cpt = 10  
+                                                              	 Afficher «  Dommage vous avez épuisé toutes vos chances, le nombre mystere etait ",Nbmyst
+		Fsi 
+                     Fsi
+                                                              Fsi
+cpt ? cpt +1
+
+	Ftantque
+Fin 
